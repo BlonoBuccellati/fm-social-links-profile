@@ -15,6 +15,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: 'Social Links Profile',
   description: 'Third solution of Frontend Mentor ',
+  icons: 'favicon-32x32.png',
 };
 
 export default function RootLayout({
