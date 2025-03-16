@@ -12,7 +12,9 @@ export default function StatusCard() {
       />
       {/* Content */}
       <div className="flex flex-col items-center justify-center gap-1">
-        <div className="text-2xl leading-normal font-bold">Jessica Randall</div>
+        <div className="text-2xl leading-normal font-semibold">
+          Jessica Randall
+        </div>
         <div className="text-Green leading-normal font-bold">
           London, United Kingdom
         </div>

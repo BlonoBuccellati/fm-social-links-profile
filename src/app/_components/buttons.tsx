@@ -15,7 +15,7 @@ const ApplicationButtons = () => {
         <button
           key={index}
           onClick={() => (window.location.href = button.url)}
-          className="font bold bg-Gray-700 hover:bg-Green hover:text-Gray-700 h-[45px] w-full rounded-lg text-sm hover:cursor-pointer"
+          className="font bold bg-Gray-700 hover:bg-Green hover:text-Gray-700 h-[45px] w-full rounded-lg font-bold hover:cursor-pointer"
         >
           {button.name}
         </button>
