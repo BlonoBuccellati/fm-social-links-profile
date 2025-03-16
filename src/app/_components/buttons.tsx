@@ -1,3 +1,5 @@
+"use client";
+
 const links = [
   { name: "GitHub", url: "#" },
   { name: "Frontend Mentor", url: "#" },
@@ -12,11 +14,10 @@ const ApplicationButtons = () => {
       {links.map((button, index) => (
         <button
           key={index}
-          className="h-[45px] w-full rounded-lg bg-gray-700 hover:cursor-pointer hover:bg-lime-300 hover:text-gray-700"
+          onClick={() => (window.location.href = button.url)}
+          className="font bold h-[45px] w-full rounded-lg bg-gray-700 text-sm hover:cursor-pointer hover:bg-lime-300 hover:text-gray-700"
         >
-          <a href={button.url} className="text-sm font-bold">
-            {button.name}
-          </a>
+          {button.name}
         </button>
       ))}
     </div>
