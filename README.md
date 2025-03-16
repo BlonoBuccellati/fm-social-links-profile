@@ -11,7 +11,7 @@ This is a solution to the [Social links profile challenge on Frontend Mentor](ht
     - [Screenshot](#screenshot)
     - [Links](#links)
   - [My process](#my-process)
-    - [Built with](#built-with)
+    - [Tech Stack](#tech-stack)
     - [What I learned](#what-i-learned)
     - [Continued development](#continued-development)
     - [Useful resources](#useful-resources)
@@ -36,14 +36,14 @@ Users should be able to:
 
 ## My process
 
-### Built with
+### Tech Stack
 
-- Semantic HTML5 markup
-- Flexbox
-- Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
+[![My Skills](https://skillicons.dev/icons?i=ts,nextjs,react,tailwind,nodejs)](https://skillicons.dev)
+
 - [Next.js](https://nextjs.org/) - React framework
+- [React](https://reactjs.org/) - JS library
 - [tailwindcss](https://tailwindcss.com/) - utility-first CSS framework
+- [Node.js](https://nodejs.org/) - Runtime & Build Tool
 
 ### What I learned
 
