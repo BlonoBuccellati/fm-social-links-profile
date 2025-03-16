@@ -20,7 +20,7 @@ export default function StatusCard() {
         </div>
       </div>
       <p className="leading-normal">
-        &ldquo;Front-end developer and avid reader.&rdquo;
+        &quot;Front-end developer and avid reader.&quot;
       </p>
       <ApplicationButtons />
     </div>
