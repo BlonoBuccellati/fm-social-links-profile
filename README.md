@@ -48,19 +48,20 @@ Users should be able to:
 
 ### What I learned
 
-1. Figmaの読み方で、以下の内容を理解した。
+1. Understanding Figma Terminology
 
-- Fit: 枠からはみ出さすに収まるようにすること(`object-fit:contain`)
-  ※可変な要素に指定すべき？
-- Scale: 親要素に合わせる。(`width:100%`)
-  ※`w-full`で解決
+- Fit: Ensures that the content stays within the frame without overflowing(`object-fit: contain`).<br>
+  ※ Might be necessary for elements with flexible sizes.
+- Scale: Adjusts the size based on the parent element (`width: 100%`).<br>
+  ※ Can be solved using `w-full`.
 
-2. CSSについて、サイズの指定をどこまですべきか曖昧だったが、現在は以下の理解をしている。
+2. Clarifying CSS Size Specifications
+   Previously, I was uncertain about how much to specify element sizes in CSS. Now, I understand the following principles:
 
-- 親に合わせて動く場合:サイズを指定しない。
-- サイズが決まっている場合:サイズを指定する。
+- If an element should adjust based on its parent, do not specify a fixed size.
+- If the size is predetermined, explicitly define it.
 
-そのため今回は、カードに対してサイズを指定し、他はボタンの`height`のみサイズを指定し、`width`を`full`に設定した。
+Based on this, I specified the size for the card, set a fixed `height` for the button, and applied `w-full` for its width.
 
 ```javascript
 <div className="flex w-full flex-col gap-4">
@@ -75,19 +76,20 @@ Users should be able to:
 </div>
 ```
 
-3. 行間について
-   Tailwind を適用せずに、`line-height` を指定しないと、ブラウザのデフォルトの行間が適用されることを知った。
-   デフォルトではブラウザごとに行間が異なるため、`leading-normal`(行間)を指定する必要があった。
-   今までUIの微調整が出来ていなかったのは、行間が理解でいていなかったことだと思う。
+3. Understanding Line Height
+   I learned that if Tailwind is not applied and `line-height` is not explicitly set, the browser's default line height is used.
+   Since the default line height varies between browsers, it was necessary to specify `leading-normal` to ensure consistency.
+   I now realize that my inability to fine-tune the UI before was due to my lack of understanding of line height.
 
 ### Continued development
 
-mobile-firstの思想にのって、最も小さいサイズから指定すべきだったが、これが出来ていなかったため、次回からは最も小さいサイズから指定したいと思う。
-Frontend Mentorの3回目の課題となったが、UIの構築にだいぶ慣れてきて、自信がついてきた。今後も継続的に学んでいきたい。また、現在GridではなくFlexboxを使用しているため、今後はGridにも慣れていきたい。
+Following the mobile-first approach, I should have started by defining styles for the smallest screen size first. However, I failed to do so this time. Moving forward, I will make sure to prioritize the smallest size first.
+This was my third project on Frontend Mentor, and I feel much more comfortable with UI development, gaining confidence along the way. I want to continue learning consistently.
+Currently, I am using Flexbox instead of Grid, so I plan to get more familiar with Grid in the future.
 
 ### Useful resources
 
-- [【CSS】行間を指定するline-heightについて解説](https://kakuzaki-web.com/2024/06/179/#:~:text=%E9%81%A9%E7%94%A8%E3%81%95%E3%82%8C%E3%81%BE%E3%81%99%E3%80%82-,line%2Dheight%E3%81%AE%E3%83%87%E3%83%95%E3%82%A9%E3%83%AB%E3%83%88%E5%80%A4%E3%81%A8%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA,%E3%81%99%E3%82%8B%E3%81%93%E3%81%A8%E3%81%8C%E9%87%8D%E8%A6%81%E3%81%A7%E3%81%99%E3%80%82) - 行間について知る上で役に立った。
+- [【CSS】行間を指定するline-heightについて解説](https://kakuzaki-web.com/2024/06/179/#:~:text=%E9%81%A9%E7%94%A8%E3%81%95%E3%82%8C%E3%81%BE%E3%81%99%E3%80%82-,line%2Dheight%E3%81%AE%E3%83%87%E3%83%95%E3%82%A9%E3%83%AB%E3%83%88%E5%80%A4%E3%81%A8%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA,%E3%81%99%E3%82%8B%E3%81%93%E3%81%A8%E3%81%8C%E9%87%8D%E8%A6%81%E3%81%A7%E3%81%99%E3%80%82) - It was helpful in deepening my understanding of line height.
 
 ## Author
 
