@@ -28,85 +28,69 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
-
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it.
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+![](./screenshot.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Frontend Mentor Solutions](https://www.frontendmentor.io/profile/BlonoBuccellati/solutions)
+- Live Site URL: [Social Links Profile Deployed on Vercel](https://fm-social-links-profile-nine.vercel.app/)
 
 ## My process
 
 ### Built with
 
 - Semantic HTML5 markup
-- CSS custom properties
 - Flexbox
-- CSS Grid
 - Mobile-first workflow
 - [React](https://reactjs.org/) - JS library
 - [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+- [tailwindcss](https://tailwindcss.com/) - utility-first CSS framework
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+1. Figmaの読み方で、以下の内容を理解した。
 
-To see how you can add code snippets, see below:
+- Fit: 枠からはみ出さすに収まるようにすること(`object-fit:contain`)
+  ※可変な要素に指定すべき？
+- Scale: 親要素に合わせる。(`width:100%`)
+  ※`w-full`で解決
 
-```html
-<h1>Some HTML code I'm proud of</h1>
+2. CSSについて、サイズの指定をどこまですべきか曖昧だったが、現在は以下の理解をしている。
+
+- 親に合わせて動く場合:サイズを指定しない。
+- サイズが決まっている場合:サイズを指定する。
+
+そのため今回は、カードに対してサイズを指定し、他はボタンの`height`のみサイズを指定し、`width`を`full`に設定した。
+
+```javascript
+<div className="flex w-full flex-col gap-4">
+  {links.map((button, index) => (
+    <button
+      key={index}
+      className="h-[45px] w-full rounded-lg bg-gray-700 hover:cursor-pointer hover:bg-lime-300 hover:text-gray-700"
+    >
+      {/* some JSX */}
+    </button>
+  ))}
+</div>
 ```
 
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-
-```js
-const proudOfThisFunc = () => {
-  console.log("🎉");
-};
-```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+3. 行間について
+   Tailwind を適用せずに、`line-height` を指定しないと、ブラウザのデフォルトの行間が適用されることを知った。
+   デフォルトではブラウザごとに行間が異なるため、`leading-normal`(行間)を指定する必要があった。
+   今までUIの微調整が出来ていなかったのは、行間が理解でいていなかったことだと思う。
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+mobile-firstの思想にのって、最も小さいサイズから指定すべきだったが、これが出来ていなかったため、次回からは最も小さいサイズから指定したいと思う。
+Frontend Mentorの3回目の課題となったが、UIの構築にだいぶ慣れてきて、自信がついてきた。今後も継続的に学んでいきたい。また、現在GridではなくFlexboxを使用しているため、今後はGridにも慣れていきたい。
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- [【CSS】行間を指定するline-heightについて解説](https://kakuzaki-web.com/2024/06/179/#:~:text=%E9%81%A9%E7%94%A8%E3%81%95%E3%82%8C%E3%81%BE%E3%81%99%E3%80%82-,line%2Dheight%E3%81%AE%E3%83%87%E3%83%95%E3%82%A9%E3%83%AB%E3%83%88%E5%80%A4%E3%81%A8%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA,%E3%81%99%E3%82%8B%E3%81%93%E3%81%A8%E3%81%8C%E9%87%8D%E8%A6%81%E3%81%A7%E3%81%99%E3%80%82) - 行間について知る上で役に立った。
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+- Website - [BlonoBuccellati](https://github.com/BlonoBuccellati)
+- Frontend Mentor - [@BlonoBuccellati](https://www.frontendmentor.io/profile/BlonoBuccellati)
+- zenn - [@bln](https://zenn.dev/bln)
