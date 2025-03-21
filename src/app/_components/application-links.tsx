@@ -11,14 +11,14 @@ const links = [
 const ApplicationLinks = () => {
   return (
     <div className="flex w-full flex-col gap-4">
-      {links.map((button, index) => (
-        <button
+      {links.map((link, index) => (
+        <a
           key={index}
-          onClick={() => (window.location.href = button.url)}
-          className="font bold bg-Gray-700 hover:bg-Green hover:text-Gray-700 h-[45px] w-full rounded-lg font-bold hover:cursor-pointer"
+          href={link.url}
+          className="font bold bg-Gray-700 hover:bg-Green hover:text-Gray-700 flex h-[45px] w-full items-center justify-center rounded-lg font-bold hover:cursor-pointer"
         >
-          {button.name}
-        </button>
+          {link.name}
+        </a>
       ))}
     </div>
   );
