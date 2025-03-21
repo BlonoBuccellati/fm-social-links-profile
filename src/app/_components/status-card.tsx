@@ -2,7 +2,7 @@ import Image from "next/image";
 import ApplicationButtons from "./buttons";
 export default function StatusCard() {
   return (
-    <div className="bg-Gray-800 flex w-[327px] flex-col items-center gap-6 rounded-2xl p-6 md:h-[611px] md:w-96 md:p-10">
+    <div className="bg-Gray-800 flex w-[327px] flex-col items-center gap-6 rounded-2xl p-6 md:min-w-96 md:p-10">
       <Image
         src={"/assets/images/avatar-jessica.jpeg"}
         alt="user icon"
