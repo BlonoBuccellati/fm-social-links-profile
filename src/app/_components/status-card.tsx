@@ -1,5 +1,5 @@
 import Image from "next/image";
-import ApplicationButtons from "./buttons";
+import ApplicationLinks from "./application-links";
 export default function StatusCard() {
   return (
     <div className="bg-Gray-800 flex w-[327px] flex-col items-center gap-6 rounded-2xl p-6 md:min-w-96 md:p-10">
@@ -22,7 +22,7 @@ export default function StatusCard() {
       <p className="leading-normal">
         &quot;Front-end developer and avid reader.&quot;
       </p>
-      <ApplicationButtons />
+      <ApplicationLinks />
     </div>
   );
 }

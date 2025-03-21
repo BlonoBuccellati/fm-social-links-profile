@@ -8,7 +8,7 @@ const links = [
   { name: "Instagram", url: "#" },
 ];
 
-const ApplicationButtons = () => {
+const ApplicationLinks = () => {
   return (
     <div className="flex w-full flex-col gap-4">
       {links.map((button, index) => (
@@ -24,4 +24,4 @@ const ApplicationButtons = () => {
   );
 };
 
-export default ApplicationButtons;
+export default ApplicationLinks;
