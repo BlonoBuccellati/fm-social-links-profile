@@ -15,7 +15,7 @@ const ApplicationLinks = () => {
         <li key={index}>
           <a
             href={link.url}
-            className="font bold bg-Gray-700 hover:bg-Green hover:text-Gray-700 flex min-h-[45px] min-w-[279px] items-center justify-center rounded-lg font-bold transition-colors duration-500 hover:cursor-pointer md:min-w-76"
+            className="font bold bg-Gray-700 hover:bg-Green hover:text-Gray-700 flex min-h-[2.8125rem] min-w-[17.4375rem] items-center justify-center rounded-lg font-bold transition-colors duration-500 hover:cursor-pointer md:min-w-76"
           >
             {link.name}
           </a>
