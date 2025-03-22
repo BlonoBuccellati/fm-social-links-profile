@@ -2,7 +2,7 @@ import Image from "next/image";
 import ApplicationLinks from "./application-links";
 export default function StatusCard() {
   return (
-    <div className="bg-Gray-800 flex min-w-[327px] flex-col items-center gap-6 rounded-2xl p-6 md:min-w-96 md:p-10">
+    <div className="bg-Gray-800 flex flex-col items-center gap-6 rounded-2xl p-6 md:p-10">
       <Image
         src={"/assets/images/avatar-jessica.jpeg"}
         alt="user icon"
@@ -11,7 +11,7 @@ export default function StatusCard() {
         className="rounded-full"
       />
       {/* Content */}
-      <div className="flex flex-col items-center justify-center gap-1">
+      <div className="flex w-full flex-col items-center justify-center gap-1">
         <div className="text-2xl leading-normal font-semibold">
           Jessica Randall
         </div>
